@@ -202,23 +202,22 @@ var Slideshow = function() {
 })();
 // END Animation Hero banner
 
-// Skills bar 
-var skillsDiv = $('#skills');
+//Skills bar
 
-$(window).on('scroll', function() {
-    var winT = $(window).scrollTop(),
-        winH = $(window).height(),
-        skillsT = skillsDiv.offset().top;
-    if (winT + winH > skillsT) {
-        $('.skillbar').each(function() {
-            $(this).find('.skillbar-bar').animate({
-                width: $(this).attr('data-percent')
-            }, 4000);
-        });
-    }
-});
+// var skillsDiv = $('#skills');
+// $(window).on('scroll', function() {
+//     var winT = $(window).scrollTop();
+//     var winH = $(window).height();
+//     var skillsT = skillsDiv.offset().top;
+//     if (winT + winH > skillsT) {
+//         $('.skillbar').each(function() {
+//             $(this).find('.skillbar-bar').animate({
+//                 width: $(this).attr('data-percent')
+//             }, 2000);
+//         });
+//     }
+// });
 
-// contact form
 
 // Input Lock
 $('textarea').blur(function() {
@@ -258,4 +257,69 @@ $('#hire .field:nth-child(2) input').blur(function() {
             $('.field:nth-child(2) input + label + span').css({ 'opacity': 0 });
         }
     });
+});
+// timeline at about page
+$(function() {
+    window.sr = ScrollReveal();
+
+    if ($(window).width() < 768) {
+        if ($(".timeline-content").hasClass("js--fadeInLeft")) {
+            $(".timeline-content")
+                .removeClass("js--fadeInLeft")
+                .addClass("js--fadeInRight");
+        }
+
+        sr.reveal(".js--fadeInRight", {
+            origin: "right",
+            distance: "300px",
+            easing: "ease-in-out",
+            duration: 800
+        });
+    } else {
+        sr.reveal(".js--fadeInLeft", {
+            origin: "left",
+            distance: "300px",
+            easing: "ease-in-out",
+            duration: 800
+        });
+
+        sr.reveal(".js--fadeInRight", {
+            origin: "right",
+            distance: "300px",
+            easing: "ease-in-out",
+            duration: 800
+        });
+    }
+
+    sr.reveal(".js--fadeInLeft", {
+        origin: "left",
+        distance: "300px",
+        easing: "ease-in-out",
+        duration: 800
+    });
+
+    sr.reveal(".js--fadeInRight", {
+        origin: "right",
+        distance: "300px",
+        easing: "ease-in-out",
+        duration: 800
+    });
+});
+
+
+
+function animation() {
+    $('.fadeInUp').each(function() {
+        var target = $(this).offset().top;
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        if (scroll > target - windowHeight) {
+            $(this).css('opacity', '1');
+            $(this).css('transform', 'translateY(0)');
+        }
+    });
+}
+animation();
+$(window).scroll(function() {
+    animation();
 });
