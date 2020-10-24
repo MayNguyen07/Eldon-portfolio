@@ -17,6 +17,7 @@
 .inner {
     max-width: 1120px;
     margin: 0 auto;
+    width: 95%;
 }
 
 body {
@@ -262,7 +263,7 @@ a:hover {
     display: grid;
     grid-template-columns: 25% auto;
     gap: 30%;
-    z-index: 2;
+    z-index: 6;
 }
 
 .nav_headline {
@@ -381,3 +382,26 @@ a.bttn-dark:hover {
     right: 0;
     opacity: 1;
 }
+
+
+/****************************************************
+ * COMMON Header SP
+ ****************************************************/
+
+@media only screen and (max-width: 768px) {
+    .nav {
+        display: flex;
+        flex-direction: column;
+    }
+    .nav h1 {
+        padding-bottom: 20px;
+    }
+    a.nav_link {
+        font-size: 1rem;
+    }
+}
+
+
+/****************************************************
+ * COMMON footer SP
+ ****************************************************/
