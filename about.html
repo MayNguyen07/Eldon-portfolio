@@ -16,37 +16,31 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <!-- Style css -->
     <link rel="stylesheet" href="css/common.css" media="all" />
-    <link rel="stylesheet" href="css/style.css" media="all" />
+    <link rel="stylesheet" href="css/about.css" media="all" />
 </head>
 
 <body>
 
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <header id="header">
+        <nav class="nav">
+            <h1 class="nav_headline">May Nguyen</h1>
 
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-            </div>
+            <ul class="nav_list">
+                <li>
+                    <a href="./" class="nav_link"> Home </a>
+                </li>
+                <li>
+                    <a href="./about.html" class="nav_link"> Resume </a>
+                </li>
+                <li>
+                    <a href="./publications.html" class="nav_link"> Publications </a>
+                </li>
+                <li>
+                    <a href="#contact" class="nav_link"> Contact </a>
+                </li>
+            </ul>
         </nav>
-        <!-- End navbar -->
+        <!--End gNav-->
     </header>
 
     <div id="main">
@@ -174,7 +168,7 @@
         <!-- end education section -->
 
         <section class="client_wrap timline_edu">
-            <h4 class="fadeInUp">CLIENT</h4>
+            <h4>CLIENT</h4>
             <div class="client_items fadeInUp">
                 <img src="./img/about/uni_logo01.jpg" alt="logo">
                 <img src="./img/about/uni_logo02.png" alt="logo">
@@ -204,8 +198,11 @@
         </section>
 
         </div>
-        <footer>
-
+        <footer id="footer">
+            <div class=footer_wrap>
+                <p class="copyright-text">&copy; 2020 by Eldon Raj at IHE Deft
+                </p>
+            </div>
         </footer>
         <!-- script file -->
         <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js"></script>
