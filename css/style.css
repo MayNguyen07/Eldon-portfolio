@@ -5,10 +5,6 @@
 
 /* top_hero section */
 
-#main {
-    margin-top: 80px;
-}
-
 .hero_top h2 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 3rem;
@@ -47,7 +43,8 @@
 }
 
 .clipped {
-    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(38% 0, 100% 0, 100% 100%, 2% 100%);
+    padding: 0px;
 }
 
 @media screen and (max-width: 650px) {
@@ -187,7 +184,7 @@
     margin-right: 30px;
     border-right: 2px solid rgba(255, 255, 255, 1);
     height: 40%;
-    width: 15%;
+    width: 19%;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -253,7 +250,6 @@ h4.top_ttl_sub {
 .field_summary .field_bottom {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
 }
 
 .field_summary .field_top div img,
@@ -751,10 +747,9 @@ form input[type="submit"]:focus {
     #main,
     .clipped {
         margin-top: 110px;
-        top: 115px;
     }
     .clipped {
-        clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+        clip-path: none;
     }
     #top_wrap {
         display: flex;
@@ -762,6 +757,7 @@ form input[type="submit"]:focus {
     }
     .hero_top h2 {
         font-size: 2.3rem;
+        width: auto;
     }
     .headline {
         width: 95%;
@@ -781,6 +777,14 @@ form input[type="submit"]:focus {
     .hero_top a.bttn-dark {
         margin: 20px auto 40px;
         display: block;
+    }
+    #hero_sec img {
+        background-repeat: no-repeat;
+        min-height: 400px !important;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 400px;
     }
     .bttn-dark {
         font-size: 1.1rem;
@@ -900,7 +904,7 @@ form input[type="submit"]:focus {
     .contact_addr ul li:first-child,
     .contact_addr ul li:nth-child(2) {
         margin-left: 13px;
-        padding-left: 34px;
+        padding-left: 9px;
         padding-bottom: 20px;
     }
     .contact_addr ul li {
@@ -909,7 +913,7 @@ form input[type="submit"]:focus {
         padding-bottom: 20px;
         font-size: 1rem;
         margin-left: 13px;
-        padding-left: 34px;
+        padding-left: 9px;
         line-height: 1.4;
     }
     #hire {
@@ -918,10 +922,53 @@ form input[type="submit"]:focus {
     .contact_addr ul li span {
         text-indent: -30px;
     }
-    .contact_addr ul li span {
-        padding-right: 0px;
-    }
     .contact_addr ul li:last-child span {
-        padding-right: 0px;
+        padding-right: 13px;
+    }
+    .field_summary .field_top,
+    .field_summary .field_bottom {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .field_summary .field_top div img,
+    .field_summary .field_bottom div img {
+        max-width: 400px;
+        height: 370px;
+        width: 400px;
+        margin: 0px;
+    }
+    .field_wrap h5 {
+        bottom: 0px;
+        max-width: 400px;
+        width: 400px;
+        margin-left: 0px;
+    }
+    .field_wrap {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 1493px) {
+    .contact_addr ul li span i {
+        display: inline;
+    }
+    #hire {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .headline {
+        margin-top: 150px;
+    }
+    .hero_top a.bttn-dark {
+        margin: 40px auto;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #hire {
+        margin-right: 0px;
     }
 }
