@@ -1,0 +1,407 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=David+Libre&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Oxygen:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;1,100;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Suez+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&family=Suez+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;0,800;1,700&display=swap');
+
+/* LAYOUT */
+
+.inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    width: 95%;
+}
+
+body {
+    font-family: "Poppins", sans-serif !important;
+    /* background: #F5F6F7; */
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+
+/****************************************************
+ * Stylesheet
+ *
+ * 1. RESET SETIING
+ * 2. BASIC SETTING
+ * 3. UTILITY SETTING
+ * 4. PRINTING SETTING
+ * 5. KEYFRAME SETTING
+ *
+ * ※ The breakpoint is 768 pixel
+ ****************************************************/
+
+
+/****************************************************
+ * 1.RESET SETTING
+ ****************************************************/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/****************************************************
+ * 2.BASIC SETTING
+ ****************************************************/
+
+
+/****************************************************
+ * 3.UTILITY SETTING
+ ****************************************************/
+
+.bgWhite {
+    background-color: #ffffff;
+}
+
+.bgBlack {
+    background-color: #1d1d1e;
+}
+
+.bgGray {
+    background-color: #6a5b42;
+}
+
+.bgBrown {
+    background-color: #e3e3e3;
+}
+
+.colorWhite {
+    color: #ffffff;
+}
+
+.colorBlack {
+    color: #1d1d1e;
+}
+
+.colorBlue {
+    color: #0054a7;
+}
+
+.colorGray {
+    color: #6a5b42;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fd9638;
+    text-decoration: none;
+}
+
+
+/****************************************************
+ * Header
+ ****************************************************/
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background-color: #1E2D3B;
+    display: grid;
+    grid-template-columns: 25% auto;
+    gap: 30%;
+    z-index: 6;
+}
+
+.nav_headline {
+    font-size: 2.5rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    color: #f1f1f1;
+}
+
+.nav_list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav_link {
+    text-decoration: none;
+    color: #f1f1f1;
+    font-weight: 600;
+    transition: opacity 200ms ease-in-out;
+    overflow: hidden;
+}
+
+.nav_link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    margin-top: 2px;
+    border-radius: 2px;
+    background: #fd9638;
+    transition: width 200ms ease-in-out;
+}
+
+.nav_link.nav-current::after,
+.nav_link:hover::after {
+    width: 100%;
+}
+
+
+/****************************************************
+ * Footer
+ ****************************************************/
+
+.footer_wrap {
+    background-color: #1E2D3B;
+    border-top: 1px solid #ffffff;
+}
+
+.copyright-text {
+    color: #e3e3e3;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 15px 0;
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+
+/****************************************************
+ * COMMON BUTTON
+ ****************************************************/
+
+.bttn-dark {
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    width: 250px;
+    font-weight: bold;
+    padding: 16px 0px;
+    background-color: rgb(0, 172, 238);
+    border-radius: 2px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+a.bttn-dark {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a.bttn-dark:hover {
+    color: #103c60;
+    border: 2px solid #103c60;
+    background-color: #ffffff;
+}
+
+.bttn-dark:before {
+    -webkit-transition: 0.5s all ease;
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #ffffff;
+    z-index: -1;
+}
+
+.bttn-dark:hover:before {
+    -webkit-transition: 0.5s all ease;
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+
+.bttn-dark:focus:before {
+    -webkit-transition: 0.5s all ease;
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+
+
+/****************************************************
+ * COMMON Header SP
+ ****************************************************/
+
+@media only screen and (max-width: 768px) {
+    .nav {
+        display: flex;
+        flex-direction: column;
+    }
+    .nav h1 {
+        padding-bottom: 20px;
+    }
+    a.nav_link {
+        font-size: 1rem;
+    }
+}
+
+
+/****************************************************
+ * COMMON footer SP
+ ****************************************************/
